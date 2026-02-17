@@ -5,7 +5,7 @@ import Register from "./pages/Register";
 import Livres from "./pages/admin/Livres";
 import Categories from "./pages/admin/Categories";
 import Navbar from "./components/layout/Navbar";
-
+import Home from "./pages/public/Home";
 import Clients from "./pages/admin/Clients";
 import Orders from "./pages/admin/Orders";
 import DashboardAdmin from "./pages/admin/dashboardAdmin";
@@ -18,7 +18,8 @@ const App = () => {
     <Router>
       <Routes>
         {/* Page par défaut */}
-        <Route path="/" element={<Register />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/books/:id" element={<BookDetails />} />
         <Route path="/admin/livres/:id" element={<BookDetail />} />
